@@ -11,7 +11,7 @@ with open('requirements.txt') as f:
 os.environ["TORCH_CUDA_ARCH_LIST"] = "5.0;6.0;6.1;6.2;7.0;7.5;8.0;8.6;8.9;9.0"
 setup(
     name='KNN_CUDA',
-    version=__version__,
+    version=version['__version__'],
     description='pytorch version knn support cuda.',
     author='Shuaipeng Li',
     author_email='sli@mail.bnu.edu.cn',
