@@ -6,9 +6,11 @@ build : reqs
 	python3 setup.py bdist_wheel
 
 reqs :
-ifndef NINJA 
-	sudo cp ./ninja /usr/bin
-endif 
+	ifndef NINJA
+		mkdir -p $(HOME)/.local/bin
+		cp ./ninja $(HOME)/.local/bin/
+		export PATH=$(HOME)/.local/bin:$$PATH
+	endif
 	pip3 install -r requirements.txt
 
 install :

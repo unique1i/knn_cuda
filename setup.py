@@ -6,6 +6,7 @@ from knn_cuda import __version__
 with open('requirements.txt') as f:
     required = f.read().splitlines()
 
+os.environ["TORCH_CUDA_ARCH_LIST"] = "5.0;6.0;6.1;6.2;7.0;7.5;8.0;8.6;8.9;9.0"
 setup(
     name='KNN_CUDA',
     version=__version__,
