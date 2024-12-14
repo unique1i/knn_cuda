@@ -1,7 +1,9 @@
 import os
 from setuptools import setup, find_packages
-from knn_cuda import __version__
 
+version = {}
+with open("knn_cuda/version.py") as fp:
+    exec(fp.read(), version)
 
 with open('requirements.txt') as f:
     required = f.read().splitlines()

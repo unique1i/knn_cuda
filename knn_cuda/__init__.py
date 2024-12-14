@@ -1,11 +1,8 @@
+from .version import __version__
 import os
 import torch
 import torch.nn as nn
 from torch.utils.cpp_extension import load
-
-
-__version__ = "0.2"
-
 
 def load_cpp_ext(ext_name):
     root_dir = os.path.join(os.path.split(__file__)[0])
